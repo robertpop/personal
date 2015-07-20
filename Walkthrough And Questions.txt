@@ -1,0 +1,17 @@
+﻿TASK:
+Take from a previous or upcoming project some source code which provides a good example of your work and below write a walkthrough on the code.
+
+ANSWER:
+There are two files, a Controller and a Service, both written in JavaScript, part of an AngularJS project. The Controller is used by and for the page called Regional Settings, where a user can update his/her regional settings, like Currency Position, Time Zone, Week Start Day etc.
+The Controller uses the Service's functions for API calls to retrieve and update data on the server.
+I tried to explain more using commentaries in the code. Please see both files (Service & Controller + screenshot) for more details.
+
+QUESTIONS:
+- What problem(s) did it solve?
+This part of the project solves the problem of updating / loading the necessary information from the DB, to be used as part of an AngularJS web application page. It uses AJAX API calls to communicate with the server.
+
+- What potential issues does it have, if any?
+The code could probably be written using less lines.
+
+- How could we provide it?
+This code was written based on an AngularJS front-end framework, using Laravel in the back-end for PHP APIs and MySQL DB integration. The API calls use an AngularJS REST-AJAX approach to GET or POST information to the server. The Controller & Service are written in JavaScript for AngularJS.
