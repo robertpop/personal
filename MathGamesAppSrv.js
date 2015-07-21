@@ -4,8 +4,10 @@
     var app = angular.module('robertPop');
 
     app.factory('MathGamesAppSrv', ['$rootScope', function($rootScope) {
+		
+		var mathGamesService = {};
 
-        var fiboEvenSum = function(limitNo) {
+        mathGamesService.fiboEvenSum = function(limitNo) {
             var fn3 = 2, fn6 = 0, fn = 2, sum = 0;
             while (fn < limitNo) {
                 sum += fn;
@@ -16,7 +18,7 @@
             return sum;
         };
 
-        var fizzBuzz = function(limitNo) {
+        mathGamesService.fizzBuzz = function(limitNo) {
             var i, result;
             for (i = 1; i <= limitNo; i++) {
                 result = '';
@@ -28,10 +30,7 @@
             }
         };
 
-        return {
-            fiboEvenSum: fiboEvenSum,
-            fizzBuzz: fizzBuzz
-        };
+        return mathGamesService;
 
     }]);
 
