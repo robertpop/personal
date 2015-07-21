@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module('hoteloPro');
+    var app = angular.module('robertPop');
 
     app.factory('SettingsRegionalSrv', ['$rootScope', 'LS', '$http', '$filter', function($rootScope, LS, $http) {
 

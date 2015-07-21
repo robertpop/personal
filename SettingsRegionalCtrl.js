@@ -1,19 +1,27 @@
 (function () {
     'use strict';
 
-    var app = angular.module('hoteloPro');
+    var app = angular.module('robertPop');
 
     // This AngularJS controller is used in the REGIONAL SETTINGS interface where the user can update his/her settings
     // regarding Time Zone, Week Start, Currency etc.
     // The functions below are accessible and are called from the directives and DOM elements on that page.
 
-    app.controller('SettingsRegionalCtrl', ['$scope', '$rootScope', 'ErrorSrv', '$location', '$http', 'LS', 'SettingsRegionalSrv', 'ConfigService', function($scope, $rootScope, ErrorSrv, $location, $http, LS, SettingsRegionalSrv, ConfigService) {
+    app.controller('SettingsRegionalCtrl', ['$scope', '$rootScope', 'ErrorSrv', '$location', '$http', 'LS', 'SettingsRegionalSrv', 'MathGamesAppSrv', function($scope, $rootScope, ErrorSrv, $location, $http, LS, SettingsRegionalSrv, MathGamesAppSrv) {
 
         var hotelData = SettingsRegionalSrv.getData();
         // service data initialisation, initialising to the latest data from the Local Storage
         // object containing the latest data after initialisation
         // these two functions could be done in one single function, but due to other requirements, later, in other Services and Controller files,
         // it was better to keep them as two different functions
+
+        $scope.fiboEvenSum = function(limitNumber) {
+            return MathGamesAppSrv.fiboEvenSum(limitNumber);
+        };
+
+        $scope.fizzBuzz = function(limitNumber) {
+            return MathGamesAppSrv.fizzBuzz(limitNumber);
+        };
 
         $scope.configObject = hotelData.config;
         //needed a stand-alone object for the config property of hotelData, which is the main data object
