@@ -15,13 +15,7 @@
         // these two functions could be done in one single function, but due to other requirements, later, in other Services and Controller files,
         // it was better to keep them as two different functions
 
-        $scope.fiboEvenSum = function(limitNumber) {
-            return MathGamesAppSrv.fiboEvenSum(limitNumber);
-        };
-
-        $scope.fizzBuzz = function(limitNumber) {
-            return MathGamesAppSrv.fizzBuzz(limitNumber);
-        };
+        $scope.mathGames = MathGamesAppSrv; //this is the scope object that can be used to call the MathGamesAppSrv service functions such as Fibo or FizzBuzz
 
         $scope.configObject = hotelData.config;
         //needed a stand-alone object for the config property of hotelData, which is the main data object
