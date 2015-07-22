@@ -15,6 +15,9 @@
         // these two functions could be done in one single function, but due to other requirements, later, in other Services and Controller files,
         // it was better to keep them as two different functions
 
+        /*
+        ADDED THE GAMES MODULE TO BE REUSABLE
+        */
         $scope.mathGames = MathGamesAppSrv; //this is the scope object that can be used to call the MathGamesAppSrv service functions such as Fibo or FizzBuzz
 
         $scope.configObject = hotelData.config;
